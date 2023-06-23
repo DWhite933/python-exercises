@@ -7,15 +7,18 @@
 #   Celsius = (Fahrenheit - 32) × (5 / 9)
 
 def convertToFahrenheit(degreesCelsius : float):
+    """ Converts a temperature in degrees Celsius to degrees Fahrenheit """
     return degreesCelsius * (9/5) + 32.0
   
 
 def convertToCelsius(degreesFahrenheit: float):
+    """ Converts a temperature in degrees Farenheit to degrees Celsius """
     return (degreesFahrenheit - 32.0) * (5/9)
 
-# Test asserts
-assert convertToCelsius(0) == -17.77777777777778
-assert convertToCelsius(180) == 82.22222222222223
-assert convertToFahrenheit(0) == 32
-assert convertToFahrenheit(100) == 212
-assert convertToCelsius(convertToFahrenheit(15)) == 15
+if __name__ == '__main__':
+    # Test asserts
+    assert convertToCelsius(0) == -17.77777777777778
+    assert convertToCelsius(180) == 82.22222222222223
+    assert convertToFahrenheit(0) == 32
+    assert convertToFahrenheit(100) == 212
+    assert convertToCelsius(convertToFahrenheit(15)) == 15

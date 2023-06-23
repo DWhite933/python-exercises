@@ -12,27 +12,32 @@
 #   surface area = (L × W × 2) + (L × H × 2) + (W × H × 2)
 
 def area(length : int, width : int):
+    """ Calculates the area of a shape with given length and width """
     return length * width
 
 def perimeter(length : int, width : int):
+    """ Calculates the perimeter of a shape with given length and width """
     return (2 * length) + (2 * width)
 
 def volume(length : int, width : int, height : int):
+    """ Calculates the volume of a shape with given length, width and height """
     return length * width * height
 
 def surfaceArea(length : int, width : int, height : int):
+    """ Calculates the surface area of a shape with given length, width and height """
     return (length * width * 2) + (length * height * 2) + (width * height * 2)
 
-# test assertions
-assert area(10, 10) == 100
-assert area(0, 9999) == 0
-assert area(5, 8) == 40
-assert perimeter(10, 10) == 40
-assert perimeter(0, 9999) == 19998
-assert perimeter(5, 8) == 26
-assert volume(10, 10, 10) == 1000
-assert volume(9999, 0, 9999) == 0
-assert volume(5, 8, 10) == 400
-assert surfaceArea(10, 10, 10) == 600
-assert surfaceArea(9999, 0, 9999) == 199960002
-assert surfaceArea(5, 8, 10) == 340
+if __name__ == '__main__':
+    # test assertions
+    assert area(10, 10) == 100
+    assert area(0, 9999) == 0
+    assert area(5, 8) == 40
+    assert perimeter(10, 10) == 40
+    assert perimeter(0, 9999) == 19998
+    assert perimeter(5, 8) == 26
+    assert volume(10, 10, 10) == 1000
+    assert volume(9999, 0, 9999) == 0
+    assert volume(5, 8, 10) == 400
+    assert surfaceArea(10, 10, 10) == 600
+    assert surfaceArea(9999, 0, 9999) == 199960002
+    assert surfaceArea(5, 8, 10) == 340
